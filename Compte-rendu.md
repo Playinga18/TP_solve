@@ -136,6 +136,8 @@ P1 = 15
 P2 = 10
 ```
 
+* Il suffit d'ajouter la ligne `os.system('lp_solve output.lp')` dans le main de notre programme, ainsi le programme nous permettra d'afficher les solutions et affiche l’optimum ainsi que les variables non-null et leur valeurs. 
+
 -----------------------------------------------------------
 
 ### Exercice 6:
@@ -143,9 +145,15 @@ Essayez votre programme avec le fichier data.txt.
 
 (a) Quel est le bénéfice optimal ?
 
+* 
+
 (b) Combien de produits différents faut-il fabriquer ?
 
+*
+
 (c) Combien de temps a mis le solveur pour calculer la solution optimale ?
+
+*
 
 -----------------------------------------------------------
 

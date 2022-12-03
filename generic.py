@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+import os
 import sys
 
 
@@ -45,14 +45,23 @@ def read_product(file, m):
     return res
 
 
-def formatage(product, ressource):
+def formatage(product, ressource, option):
     res = "max: "
+    str_option = ""
     for i in range(len(product)):
         res += product[i][-1] + product[i][0]
         if i < len(product) - 1:
             res += "+"
         else:
             res += ";\n"
+
+        if option == 1:
+            str_option += product[i][0]
+            if i < len(product) - 1:
+                str_option += ", "
+            else:
+                str_option += ";\n"
+
     for i in range(len(ressource)):
         for j in range(len(product)):
             res += product[j][i + 1] + product[j][0]
@@ -60,10 +69,13 @@ def formatage(product, ressource):
                 res += "+"
             else:
                 res += " <= " + ressource[i] + ";\n"
+
+    if option == 1:
+        res += "free " + str_option
     return res
 
 
-def file_read(name):
+def file_read(name, option):
     res = ""
     try:
         f = open(name, 'r')
@@ -71,7 +83,7 @@ def file_read(name):
         n, m = read_line0(line)
         resource = readline_ressource(f, n)
         product = read_product(f, m)
-        res = formatage(product, resource)
+        res = formatage(product, resource, option)
     finally:
         f.close()
     return res
@@ -79,9 +91,9 @@ def file_read(name):
 
 # FILE WRITER
 
-def fileWrite(stres):
+def file_write(stres, name):
     try:
-        output = open("output.lp", "a")
+        output = open(name, "w")
         output.write(stres)
     finally:
         output.close()
@@ -92,14 +104,11 @@ def fileWrite(stres):
 if __name__ == '__main__':
     option = 0
     argc = 1
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 2:
         if sys.argv[1] == "-int":
             option = 1
-
-
-
-        for i in range(1+option, len(sys.argv)):
-            stres = file_read(sys.argv[i])
-            print(stres)
-            fileWrite(stres)
-        # os.system('lp_solve output.lp')
+        file_in = sys.argv[1 + option]
+        file_out = sys.argv[2 + option]
+        res = file_read(file_in, option)
+        file_write(res, file_out)
+        os.system('lp_solve ' + file_out)
