@@ -119,6 +119,7 @@ max: 150P1+100P2;
 Ajoutez à votre programme la possibilité de donner l’argument -int sur la ligne de commande
 pour rajouter des contraintes d’intégralité sur toutes les variables.
 
+* Ci-joint le fichier generic.py ainsi que son manuel d'utilisation.
 
 -----------------------------------------------------------
 
