@@ -1,5 +1,6 @@
 #!/usr/bin/python
-import os
+
+import subprocess
 import sys
 
 
@@ -33,7 +34,6 @@ def readline_ressource(file, n):
 
 
 def read_product(file, m):
-    res = []
     while len(res) < m:
         line = file.readline()
         string = line.strip().split()
@@ -76,7 +76,6 @@ def formatage(product, ressource, option):
 
 
 def file_read(name, option):
-    res = ""
     try:
         f = open(name, 'r')
         line = f.readline()
@@ -99,6 +98,17 @@ def file_write(stres, name):
         output.close()
 
 
+# PRINT SOLUTION
+
+def solution(file_out):
+    ret = subprocess.run(["lp_solve", file_out], stdout=subprocess.PIPE)
+    lst = ret.stdout.decode().split('\n')
+    print("opt = " + lst[1].split()[-1])
+    lst = lst[4:]
+    for val in list(filter(lambda v: len(v.split()) == 2 and float(v.split()[1]) != 0, lst)):
+        print(" = ".join(val.split()))
+
+
 # MAIN
 
 if __name__ == '__main__':
@@ -111,4 +121,4 @@ if __name__ == '__main__':
         file_out = sys.argv[2 + option]
         res = file_read(file_in, option)
         file_write(res, file_out)
-        os.system('lp_solve ' + file_out)
+        solution(file_out)

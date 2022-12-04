@@ -40,6 +40,8 @@ Actual values of the variables:
 x1                              2
 x2                              8
 ```
+* On voit donc que les valeurs optimales sont: 
+x1 = 2, x2 = 8
 
 -----------------------------------------------------------
 
@@ -67,6 +69,8 @@ non négativité: `This problem is unbounded`
 Vérifiez que vous trouvez bien les mˆemes solutions `a l’exercice 1 de la
 feuille de TD 1 avec le solveur que celles que l’on a d´etermin´ees graphiquement
 
+* En effet les valeurs calculées graphiquement de l'exercice 1 de la feuille de td1 et les
+  solutions trouvé par le solveur sont les mêmes.
 -----------------------------------------------------------
 
 ## 2. Un problème générique
@@ -149,11 +153,11 @@ Essayez votre programme avec le fichier data.txt.
 
 (b) Combien de produits différents faut-il fabriquer ?
 
-*  Il faut fabriquer 6 produits
+*  Il faut fabriquer 6 produits différents
 
 (c) Combien de temps a mis le solveur pour calculer la solution optimale ?
 
-* ?
+* Le solveur met moins d'une seconde pour calculer la soltion optimal
 
 -----------------------------------------------------------
 
@@ -164,15 +168,15 @@ précédent. Expliquez le résultat.
 
 (a) Quel est le bénéfice optimal ?
 
-* ?
+* Le bénéfice optimal pour le fichier data.txt est de 21638.0000
 
 (b) Combien de produits différents faut-il fabriquer ?
 
-* ?
+* Il faut fabriquer 12 produits différents
 
 (c) Combien de temps a mis le solveur pour calculer la solution optimale ?
 
-* ?
+* Le solveur met environs 20 secondes pour calculer la soltion optimal
 
 -----------------------------------------------------------
 
@@ -189,11 +193,12 @@ sans et avec les contraintes d’intégralité. Expliquez le résultat.
 
 (b) Combien de produits différents faut-il fabriquer ?
 
-*  
+*  Il faut fabriquer 97 produits différents
 
 (c) Combien de temps a mis le solveur pour calculer la solution optimale ?
 
-* ?
+* Le solveur met moins d'une seconde pour calculer la soltion optimal
+
 
 2) Avec les contraintes
 
@@ -209,6 +214,7 @@ sans et avec les contraintes d’intégralité. Expliquez le résultat.
 
 * ?
 
+On remarque que le solveur avec les contraintes ne réponds pas (renvoie aucune solutions) dans un temps raisonnble.
 
 -----------------------------------------------------------
 
@@ -221,6 +227,10 @@ sans et avec les contraintes d’intégralité. Expliquez le résultat.
 Reprenez l’éxercice 4 de la feuille de TD 2 sur la d´ecoupe de barres
 d’aluminium et trouvez la solution optimale avec le solveur. Comment faut-il découper les
 barres de 3m pour minimiser le nombre utilisé ?
+
+* D'après l'exercice 4 de la feuille TD2, le solveur nous trouve comme solutions:
+  * Il faut au total 135 barre, soit 20 en 6 morceaux de 0.5m, 65 en 2 morceaux de 0.5m et 2 morceaux de 1m
+  ainsi que 50 en 1 morceau de 0,5m et 2 morceux de 1,2m.
 
 -----------------------------------------------------------
 
@@ -236,5 +246,6 @@ fonction utilise 0, 1 ou 2 éléments de longueur 120 et continue de fa¸con ré
 il faut toujours placer la plus petite longueur `a la fin et en prendre le maximum
 possible.
 
+* Le programme permettant d'éffectuer cette question est dans le fichier exerice10.py
 
 -----------------------------------------------------------
