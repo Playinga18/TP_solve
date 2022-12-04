@@ -34,6 +34,7 @@ def readline_ressource(file, n):
 
 
 def read_product(file, m):
+    res = []
     while len(res) < m:
         line = file.readline()
         string = line.strip().split()
