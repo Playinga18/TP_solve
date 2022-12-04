@@ -145,15 +145,15 @@ Essayez votre programme avec le fichier data.txt.
 
 (a) Quel est le bénéfice optimal ?
 
-* 
+* Le bénéfice optimal pour le fichier data.txt est de 21654.79332331
 
 (b) Combien de produits différents faut-il fabriquer ?
 
-*
+*  Il faut fabriquer 6 produits
 
 (c) Combien de temps a mis le solveur pour calculer la solution optimale ?
 
-*
+* ?
 
 -----------------------------------------------------------
 
@@ -162,6 +162,17 @@ Essayez votre programme avec le fichier data.txt.
 Rajoutez les contraintes d’intégralité. Répondez aux questions de l’exercice
 précédent. Expliquez le résultat.
 
+(a) Quel est le bénéfice optimal ?
+
+* ?
+
+(b) Combien de produits différents faut-il fabriquer ?
+
+* ?
+
+(c) Combien de temps a mis le solveur pour calculer la solution optimale ?
+
+* ?
 
 -----------------------------------------------------------
 
@@ -169,6 +180,34 @@ précédent. Expliquez le résultat.
 
 Essayez maintenant avec le fichier (beaucoup) plus volumineux bigdata.txt,
 sans et avec les contraintes d’intégralité. Expliquez le résultat.
+
+1) Sans les contraintes
+
+(a) Quel est le bénéfice optimal ?
+
+* Le bénéfice optimal pour le fichier bigdata.txt est de 5050533.10609334
+
+(b) Combien de produits différents faut-il fabriquer ?
+
+*  
+
+(c) Combien de temps a mis le solveur pour calculer la solution optimale ?
+
+* ?
+
+2) Avec les contraintes
+
+(a) Quel est le bénéfice optimal ?
+
+* ?
+
+(b) Combien de produits différents faut-il fabriquer ?
+
+* ?
+
+(c) Combien de temps a mis le solveur pour calculer la solution optimale ?
+
+* ?
 
 
 -----------------------------------------------------------

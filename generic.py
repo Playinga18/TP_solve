@@ -71,7 +71,7 @@ def formatage(product, ressource, option):
                 res += " <= " + ressource[i] + ";\n"
 
     if option == 1:
-        res += "free " + str_option
+        res += "int " + str_option
     return res
 
 
