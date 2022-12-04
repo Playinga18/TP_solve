@@ -26,10 +26,8 @@ def readline_ressource(file, n):
     while len(res) < n:
         line = file.readline()
         string = line.strip().split()
-
         for x in string:
             res.append(x)
-
     return res
 
 
@@ -42,7 +40,6 @@ def read_product(file, m):
         for x in string:
             lst_p.append(x)
         res.append(lst_p)
-
     return res
 
 
@@ -55,14 +52,12 @@ def formatage(product, ressource, option):
             res += "+"
         else:
             res += ";\n"
-
         if option == 1:
             str_option += product[i][0]
             if i < len(product) - 1:
                 str_option += ", "
             else:
                 str_option += ";\n"
-
     for i in range(len(ressource)):
         for j in range(len(product)):
             res += product[j][i + 1] + product[j][0]
@@ -70,7 +65,6 @@ def formatage(product, ressource, option):
                 res += "+"
             else:
                 res += " <= " + ressource[i] + ";\n"
-
     if option == 1:
         res += "int " + str_option
     return res
